@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper  namespace="com.fengkai35.seckill.dao.SettingInfoDao">
+
+  	
+  	<select id="queryByUsername"  resultType="SettingInfo">
+  			select id,public_ip,app_id,
+			merchant_private_key,alipay_public_key,username
+  			from setting_info
+  			where username =#{username}
+  	</select>
+
+
+  </mapper>
